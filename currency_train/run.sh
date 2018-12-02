@@ -3,7 +3,7 @@
 # The script expects path to directory containing training set. Images belonging to same class should be in same directory in the training set.
 
 
-vocabSize=1000;
+vocabSize=10000;
 numImagesToTrain=200;
 
 if [ -d "currency_train_output" ]; then
