@@ -372,7 +372,7 @@ void getVote(int geoScore[], int topKValue, int labels[], int retrievedImages[],
     *              # vote- vote for each class.
     **/
  
-    for(int i=0;i<4;i++)
+    for(int i=0;i<8;i++)
         vote[i]=0;
    
     for(int i=0;i<topKValue;i++)
@@ -390,7 +390,7 @@ int argmax(int array[])
   
     int k = 0;
     int max = array[k];
-    for (int i = 0; i < 4; i++)
+    for (int i = 0; i < 8; i++)
     {
         if (array[i] > max)
         {
@@ -483,7 +483,7 @@ int testCurrency(char *pathToTestImg, vector<invertedIndex> &allIndex, int label
     printf("\t%f", (float)(clock()-clo)/CLOCKS_PER_SEC);   
 
     /******************** vote *********************/
-    int vote[4]={0};
+    int vote[8]={0};
     getVote(geoScore, topKValue, labels, retrievedImages, vote);
    
     /******************** label *********************/
@@ -523,7 +523,7 @@ void readFiles(char *pathToTxtFile, vector<invertedIndex> &allIndex, int labels[
     int numCorrect=0;
     printf("\nPath\tdetect_keypoints\tassign_vocab\tinv_index_search\trerank_geo\ttrue_label\tpredicted_label\ttotal_time");
 
-    for(int i=0;i<4;i++)
+    for(int i=0;i<8;i++)
     {
         char txtFileName[200];
         sprintf(txtFileName,"%s/%s.txt", pathToTxtFile, txtFiles[i]);

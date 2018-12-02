@@ -11,6 +11,10 @@ for f in $2/ten/*.jpg; do echo $f;done > train_files/ten.txt
 for f in $2/twenty/*.jpg; do echo $f;done > train_files/twenty.txt
 for f in $2/fifty/*.jpg; do echo $f;done > train_files/fifty.txt
 for f in $2/hundred/*.jpg; do echo $f;done > train_files/hundred.txt
+for f in $2/twohundred/*.jpg; do echo $f;done > train_files/twohundred.txt
+for f in $2/fivehundred/*.jpg; do echo $f;done > train_files/fivehundred.txt
+for f in $2/new_hundred/*.jpg; do echo $f;done > train_files/new_hundred.txt
+for f in $2/new_ten/*.jpg; do echo $f;done > train_files/new_ten.txt
 
 
 g++ `pkg-config --cflags --libs opencv` testCurrency.cpp -o currency-test -lopencv_core -lopencv_imgproc -lopencv_highgui -lopencv_objdetect -lopencv_flann -lopencv_calib3d -lopencv_xfeatures2d -lopencv_features2d -lopencv_imgcodecs;
