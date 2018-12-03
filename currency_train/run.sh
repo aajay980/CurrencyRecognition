@@ -4,7 +4,7 @@
 
 
 vocabSize=10000;
-numImagesToTrain=200;
+numImagesToTrain=400;
 
 if [ -d "currency_train_output" ]; then
 	rm -r currency_train_output;
